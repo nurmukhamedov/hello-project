@@ -1,8 +1,13 @@
+import ComponentA from '../lesson-50/ComponentA';
+
 import './about.css';
 
 const About = () => {
+
     return (
-        <div className='about'>About</div>
+        <div className='about'>
+            <ComponentA />
+        </div>
     )
 }
 
