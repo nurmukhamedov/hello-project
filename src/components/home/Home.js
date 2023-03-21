@@ -1,11 +1,16 @@
+import { add, mulpitply } from '../helper3';
+import ComponentA from '../lesson-50/ComponentA';
 import './home.css';
 
 const Home = () => {
+    console.log(add(5, 4));
+    console.log(mulpitply(5, 4));
     return (
         <>
             <div className='home'>
-                <h1 className='bg-primary'>Home component
-                </h1>            </div>
+                <h2 className='title'>Hello world</h2>
+            </div>
+            <ComponentA />
         </>
     )
 }

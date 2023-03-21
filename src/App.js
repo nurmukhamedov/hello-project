@@ -1,13 +1,11 @@
-import Home from './components/home/Home';
-import About from './components/about/About';
-
-import './App.css';
+import ToDo from "./components/to-do/ToDo";
+import UseRefTest from "./components/UseRefTest";
 
 function App() {
   return (
     <div>
-      <Home />
-      <About />
+      <ToDo />
+      <UseRefTest />
     </div>
   );
 }

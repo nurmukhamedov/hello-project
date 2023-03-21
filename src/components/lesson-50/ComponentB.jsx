@@ -1,8 +1,10 @@
-const ComponentB = (hello) => {
+import styles from './componentB.module.scss';
+
+const ComponentB = () => {
     return (
         <>
-            <h2>ComponentB</h2>
-            <p>{hello.name}</p>
+            <h2 className={styles.title}>ComponentB</h2>
+            <h2 className={styles.title}>ComponentB</h2>
         </>
     )
 }
