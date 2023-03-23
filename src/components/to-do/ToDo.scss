@@ -1,0 +1,136 @@
+// App styles
+.todo-app {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+
+	h1 {
+		font-size: 32px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	form {
+		display: flex;
+		margin-bottom: 20px;
+
+		input[type="text"] {
+			flex: 1;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px 0 0 5px;
+			outline: none;
+		}
+
+		button[type="submit"],
+		button[type="button"] {
+			padding: 10px 20px;
+			font-size: 16px;
+			color: #fff;
+			background-color: #2196f3;
+			border: none;
+			border-radius: 0 5px 5px 0;
+			cursor: pointer;
+
+			&:hover {
+				background-color: #0d8ae3;
+			}
+		}
+
+		button[type="button"] {
+			margin-left: 10px;
+			background-color: #ccc;
+
+			&:hover {
+				background-color: #999;
+			}
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px;
+			margin-bottom: 10px;
+			background-color: #f9f9f9;
+			border-radius: 5px;
+
+			span {
+				flex: 1;
+				font-size: 16px;
+			}
+
+			button {
+				padding: 10px 20px;
+				font-size: 16px;
+				color: #fff;
+				background-color: #f44336;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #d32f2f;
+				}
+
+				& + button {
+					margin-left: 10px;
+					background-color: #4caf50;
+
+					&:hover {
+						background-color: #388e3c;
+					}
+				}
+			}
+		}
+	}
+
+	// Responsive styles
+	@media screen and (max-width: 480px) {
+		form {
+			flex-wrap: wrap;
+
+			input[type="text"] {
+				flex: 1 1 100%;
+				margin-bottom: 10px;
+				border-radius: 5px;
+			}
+
+			button[type="submit"],
+			button[type="button"] {
+				flex: 1 1 50%;
+				border-radius: 5px;
+
+				&:first-child {
+					margin-right: 10px;
+				}
+			}
+		}
+
+		ul li {
+			flex-wrap: wrap;
+			padding: 10px 0;
+
+			span {
+				flex: 1 1 100%;
+				margin-bottom: 10px;
+			}
+
+			button {
+				flex: 1 1 100%;
+
+				&:first-child {
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
