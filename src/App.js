@@ -1,14 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
-import About from './components/about/About';
+import SingleArticle from './components/single-article/SingleArticle';
 
 import './App.css';
 
+
 function App() {
+
   return (
-    <div>
-      <Home />
-      <About />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="news/:id" element={<SingleArticle />} />
+    </Routes>
   );
 }
 
