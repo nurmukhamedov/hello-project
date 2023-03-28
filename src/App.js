@@ -1,13 +1,12 @@
-import Home from './components/home/Home';
-import About from './components/about/About';
-
 import './App.css';
+import Home from './components/home/Home';
 
 function App() {
+
+  const firstName = 'Muhammadrasul';
   return (
     <div>
-      <Home />
-      <About />
+      <Home name={firstName} />
     </div>
   );
 }
