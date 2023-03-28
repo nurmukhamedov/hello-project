@@ -13,7 +13,7 @@ export const CountryProvider = ({ children }) => {
     return (
         <FetchContext.Provider value={{ data }}>
             {children}
-        </FetchContext.Provider>
+        </FetchContext.Provider
     )
 
 }
