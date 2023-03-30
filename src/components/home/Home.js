@@ -1,11 +1,17 @@
-import './home.css';
+import { auth } from '../firebase';
+import { useNavigate, Link } from 'react-router-dom';
+const Home = (props) => {
 
-const Home = () => {
+    const history = useNavigate();
+
+    const handleLogout = async () => {
+        await auth.signOut();
+        history.push('/login');
+    };
     return (
         <>
-            <div className='home'>
-                <h1 className='bg-primary'>Home component
-                </h1>            </div>
+            <div className="welcome-message">Hello Home</div>
+            {props.user ? <button onClick={handleLogout}>Logout</button> : <Link to="/login">Login</Link>}
         </>
     )
 }
